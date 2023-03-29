@@ -1,0 +1,33 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "overrides": {
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.6.4",
+    "@types/animejs": "^3.1.7",
+    "@vueuse/core": "^9.13.0",
+    "@vueuse/nuxt": "^9.13.0",
+    "nuxt": "^3.3.2",
+    "nuxt-icon": "^0.3.3",
+    "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.7",
+    "@vueuse/firebase": "^9.13.0",
+    "@vueuse/sound": "^2.0.1",
+    "animejs": "^3.2.1",
+    "dayjs": "^1.11.7",
+    "firebase": "^9.18.0",
+    "party-js": "^2.2.0",
+    "pinia": "^2.0.33"
+  }
+}
