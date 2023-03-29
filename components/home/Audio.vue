@@ -9,12 +9,12 @@ const refEl = ref<HTMLElement>()
 
 onMounted(() => nextTick(() => {
   audio.value = new Audio('/audio/audio.mp3')
-  // if (audio.value) {
-  //   audio.value.loop = true
-  //   document.addEventListener('click', () => {
-  //     audio.value?.play()
-  //   })
-  // }
+  if (audio.value) {
+    audio.value.loop = true
+    document.addEventListener('click', () => {
+      audio.value?.play()
+    })
+  }
 }))
 </script>
 
