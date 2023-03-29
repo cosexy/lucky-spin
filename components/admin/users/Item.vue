@@ -10,23 +10,7 @@
       {{ record.password }}
     </td>
     <td class="px-6 py-4">
-
-      <template v-if="record.prize === 1">
-        Giải Nhất
-      </template>
-      <template v-else-if="record.prize === 2">
-        Giải Nhì
-      </template>
-      <template v-else-if="record.prize === 3">
-        iPhone 14 Pro Max
-      </template>
-      <template v-else-if="record.prize === 4">
-        Nồi Cơm Điện
-      </template>
-      <template v-else-if="record.prize === 5">
-        May Mắn
-      </template>
-
+      {{ prizes[record.prize - 1] }}
     </td>
 
     <td class="px-6 py-4 text-center">
@@ -54,7 +38,7 @@
   </tr>
 </template>
 <script lang="ts" setup>
-import {PrizeEntity} from "~/entities/prize.entity";
+import {PrizeEntity, prizes} from "~/entities/prize.entity";
 import {ModalEntity} from "~/entities/modal.entity";
 
 const props = defineProps<{

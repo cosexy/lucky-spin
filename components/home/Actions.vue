@@ -15,45 +15,12 @@
       </div>
       <div class="flex flex-col items-center mt-4">
 
-        <div v-if="history.prize === 1" class="flex items-center">
+        <div class="flex items-center">
           <div>
-            <h3 class="text-lg font-semibold">Giải Nhất</h3>
+            <h3 class="text-lg font-semibold">Phần thưởng</h3>
             <p class="text-sm text-gray-500">
-              80.000.000 VNĐ
+              {{ prizes[history.prize - 1] }}
             </p>
-          </div>
-        </div>
-
-        <div v-else-if="history.prize === 2" class="flex items-center">
-          <div>
-            <h3 class="text-lg font-semibold">Giải Nhì</h3>
-            <p class="text-sm text-gray-500">
-              50.000.000 VNĐ
-            </p>
-          </div>
-        </div>
-
-
-        <div v-else-if="history.prize === 3" class="flex items-center">
-          <img width="50" src="/images/iphone.png"  alt=""/>
-          <div class="ml-5">
-            <h3 class="text-lg font-semibold">Phần thưởng</h3>
-            <p class="text-sm text-gray-500">iPhone 14 Pro Max</p>
-          </div>
-        </div>
-
-        <div v-else-if="history.prize === 4" class="flex items-center">
-          <img width="50" src="/images/cooker.png"  alt=""/>
-          <div class="ml-5">
-            <h3 class="text-lg font-semibold">Phần thưởng</h3>
-            <p class="text-sm text-gray-500">Nồi cơm điện</p>
-          </div>
-        </div>
-
-        <div v-else class="flex items-center">
-          <div>
-            <h3 class="text-lg font-semibold">Phần thưởng</h3>
-            <p class="text-sm text-gray-500">Giải may mắn</p>
           </div>
         </div>
 

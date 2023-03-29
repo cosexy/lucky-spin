@@ -26,40 +26,14 @@
 
           <div class="flex flex-wrap">
 
-            <div class="radio_item">
-              <input v-model="form.prize" type="radio" id="radio1" name="group-radio" :value="1" />
-              <label for="radio1">
-                Giải nhất
-              </label>
-            </div>
-
-
-            <div class="radio_item">
-              <input v-model="form.prize" type="radio" id="radio2" name="group-radio" :value="2" />
-              <label for="radio2">
-                Giải nhì
-              </label>
-            </div>
-
-
-            <div class="radio_item">
-              <input v-model="form.prize" type="radio" id="radio3" name="group-radio" :value="3" />
-              <label for="radio3">
-                iPhone 14
-              </label>
-            </div>
-
-            <div class="radio_item">
-              <input v-model="form.prize" type="radio" id="radio4" name="group-radio" :value="4" />
-              <label for="radio4">
-                Nồi cơm
-              </label>
-            </div>
-
-            <div class="radio_item">
-              <input v-model="form.prize" type="radio" id="radio5" name="group-radio" :value="5" />
-              <label for="radio5">
-                May mắn
+            <div
+                v-for="(item, index) in prizes"
+                :key="index"
+                class="radio_item"
+            >
+              <input v-model="form.prize" type="radio" :id="`radio-${index}`" name="group-radio" :value="index + 1" />
+              <label :for="`radio-${index}`" class="text-sm ml-1">
+                {{ item }}
               </label>
             </div>
 
@@ -108,7 +82,7 @@
 </template>
 
 <script lang="ts" setup>
-import {PrizeEntity} from "~/entities/prize.entity"
+import {PrizeEntity, prizes} from "~/entities/prize.entity"
 import {dbSet} from "#imports";
 import {ModalBase} from "#components";
 
@@ -125,7 +99,7 @@ const updateUser = async () => {
 
 <style>
 .radio_item {
-  width: 33.333333%;
+  width: 50%;
   margin-bottom: 5px;
 }
 </style>
