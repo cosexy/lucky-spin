@@ -80,6 +80,7 @@ import {
 import {getAuth} from "firebase/auth";
 import {ModalBase} from "#components";
 import {dbSet} from "#imports";
+import {prizes} from "~/entities/prize.entity";
 
 const [isLogin, toLogin] = useToggle(false)
 
@@ -131,7 +132,7 @@ const register = async () =>
 
     await dbSet(dbRef(getDatabase(), `results/${user?.uid}`), {
       uid: user?.uid,
-      prize: 5,
+      prize: prizes.length,
       spined: false,
       ...form.value,
       createdAt: Date.now()

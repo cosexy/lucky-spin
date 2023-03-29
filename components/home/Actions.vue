@@ -70,7 +70,7 @@ import anime from "animejs"
 import {getAuth} from "firebase/auth"
 import {dbSet} from "#imports";
 import {ModalEntity} from "~/entities/modal.entity";
-import {PrizeEntity} from "~/entities/prize.entity";
+import {PrizeEntity, prizes} from "~/entities/prize.entity";
 const { user } = useAuth(getAuth())
 
 const history = useRTDB<PrizeEntity>(dbRef(getDatabase(),  `results/${user.value?.uid}`))
@@ -90,9 +90,9 @@ const rotateWheel = () => {
   const wheel = document.querySelector('.wheel');
   const n = Math.floor(Math.random() * 4) + 4
 
-  const prize = history.value?.prize || 5
+  const prize = history.value?.prize || prizes.length
   // devide 360deg to 5 parts and spin to center of part-nth
-  const degBase = 360 / 5
+  const degBase = 360 / prizes.length
   const deg = degBase * prize - degBase / 2
 
   const afterSpin = async () => {
