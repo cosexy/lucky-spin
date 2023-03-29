@@ -79,7 +79,9 @@
         </g>
       </svg>
 
-      <img class="_prize absolute top-0 left-0 right-0 wheel" src="/images/content.png"  alt=""/>
+      <div class="_prize absolute top-0 left-0 right-0 wheel">
+        <img class="w-full h-full _prize_img" src="/images/content.png"  alt=""/>
+      </div>
 
     </div>
 
@@ -147,7 +149,7 @@ const bus = useEventBus<string>('modal')
   opacity: .3;
 }
 
-._prize {
+._prize_img {
   transform: scale(0.9);
 }
 </style>

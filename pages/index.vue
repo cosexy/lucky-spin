@@ -39,4 +39,9 @@
   background-size: cover;
   background-position: center;
 }
+
+#content {
+  background: url(/images/bg.jpg) center;
+  background-size: cover;
+}
 </style>
