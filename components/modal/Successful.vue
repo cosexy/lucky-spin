@@ -5,7 +5,7 @@
     </template>
 
     <template #default="{ data }">
-      <div class="font-semibold mt-4 text-center border-b border-gray-200 pb-4">Chúc mứng bạn đã phận được</div>
+      <div class="font-semibold mt-4 text-center border-b border-gray-200 pb-4">Chúc mừng bạn đã phận được</div>
 
       <div class="flex items-center mt-4 flex-col pb-5">
 

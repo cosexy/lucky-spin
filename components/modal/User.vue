@@ -75,14 +75,14 @@
           <div class="flex flex-wrap">
 
             <div class="radio_item">
-              <input v-model="form.spined" type="radio" id="radio6" name="group-radio" :value="true" />
+              <input v-model="form.spined" type="radio" id="radio6" name="group-radio1" :value="true" />
               <label for="radio6">
                 Đã quay
               </label>
             </div>
 
             <div class="radio_item">
-              <input v-model="form.spined" type="radio" id="radio7" name="group-radio" :value="false" />
+              <input v-model="form.spined" type="radio" id="radio7" name="group-radio1" :value="false" />
               <label for="radio7">
                 Chưa quay
               </label>
