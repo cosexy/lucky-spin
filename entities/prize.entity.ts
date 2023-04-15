@@ -10,4 +10,4 @@ export interface PrizeEntity {
 }
 
 
-export const prizes: string[] = ['80.000.000 VND', '50.000.000 VND', 'XÉ MÁY VISON', 'VÀNG MIẾNG SJC  9999', 'TÚI SÁCH LV', 'IPHONE 14 PRO', 'VUOCHER 2.000.000', 'NỒI CƠM ĐIỆN', 'VOUCHER 200.000', 'CHÚC BẠN MAY MẮN']
+export const prizes: string[] = ['80.000.000 VND', '50.000.000 VND', 'XÉ MÁY VISON', 'VÀNG MIẾNG SJC  9999', 'TÚI SÁCH LV', 'IPHONE 14 PRO', 'VUOCHER 2.000.000', 'NỒI CƠM ĐIỆN', 'VOUCHER 200.000', 'XE MÁY VÀNG', 'ĐIỆN THOẠI', 'CHÚC BẠN MAY MẮN']
